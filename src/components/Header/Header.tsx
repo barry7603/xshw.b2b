@@ -278,6 +278,95 @@ const Header: React.FC = () => {
           <li className="nav-item">
             <Link to="/about" className="nav-link" style={{ color: 'inherit', textDecoration: 'none' }}>{t('nav_about')}</Link>
           </li>
+          <li className="nav-item has-contact-dropdown">
+            <span 
+              className="nav-link nav-contact-trigger"
+              onClick={(e) => { e.preventDefault(); setActiveSubMenu(activeSubMenu === 'esg' ? null : 'esg'); }}
+            >
+              {t('nav_esg_section')}
+            </span>
+            <div className={`contact-dropdown ${activeSubMenu === 'esg' ? 'mobile-active' : ''}`}>
+              <div className="contact-dropdown-title">{t('nav_esg_section')}</div>
+              <a
+                href="https://esg.twse.com.tw/ESG/front/tw/#/main/home"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-dropdown-item"
+              >
+                <span className="contact-icon contact-icon-esg">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="20" height="20">
+                    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+                    <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+                  </svg>
+                </span>
+                <div className="contact-info">
+                  <span className="contact-value">{t('nav_esg_infohub')}</span>
+                </div>
+                <svg className="contact-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="14" height="14">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+              <a
+                href="https://www.twse.com.tw/ESG/zh/download.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-dropdown-item"
+              >
+                <span className="contact-icon contact-icon-report">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="20" height="20">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <polyline points="14 2 14 8 20 8" />
+                    <line x1="16" y1="13" x2="8" y2="13" />
+                    <line x1="16" y1="17" x2="8" y2="17" />
+                  </svg>
+                </span>
+                <div className="contact-info">
+                  <span className="contact-value">{t('nav_esg_report')}</span>
+                </div>
+                <svg className="contact-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="14" height="14">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+              <a
+                href="https://www.cca.gov.tw/information-service/info/2095.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-dropdown-item"
+              >
+                <span className="contact-icon contact-icon-climate">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="20" height="20">
+                    <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
+                  </svg>
+                </span>
+                <div className="contact-info">
+                  <span className="contact-value">{t('nav_climate_info')}</span>
+                </div>
+                <svg className="contact-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="14" height="14">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+              <a
+                href="https://isds.tpex.org.tw/IFRS/front/#/main/home"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-dropdown-item"
+              >
+                <span className="contact-icon contact-icon-ifrs">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="20" height="20">
+                    <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+                    <line x1="9" y1="7" x2="15" y2="7" />
+                    <line x1="9" y1="11" x2="13" y2="11" />
+                  </svg>
+                </span>
+                <div className="contact-info">
+                  <span className="contact-value">{t('nav_ifrs_zone')}</span>
+                </div>
+                <svg className="contact-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="14" height="14">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </li>
         </ul>
       </nav>
     </>
