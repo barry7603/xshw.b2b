@@ -304,6 +304,26 @@ body {
     color: #fff;
 }
 
+.contact-icon-esg {
+    background: #10b981;
+    color: #fff;
+}
+
+.contact-icon-report {
+    background: #3b82f6;
+    color: #fff;
+}
+
+.contact-icon-climate {
+    background: #0284c7;
+    color: #fff;
+}
+
+.contact-icon-ifrs {
+    background: #8b5cf6;
+    color: #fff;
+}
+
 .contact-info {
     display: flex;
     flex-direction: column;
